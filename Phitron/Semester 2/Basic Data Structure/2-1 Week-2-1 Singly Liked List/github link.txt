@@ -1,0 +1,1 @@
+https://github.com/AsifMohammedSifat/Conceptual-Session/blob/main/Batch-3/DS/Week-2-1%2012-06-2023%20Singly%20Liked%20List/2_create_node.cpp

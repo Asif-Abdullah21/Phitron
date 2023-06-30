@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "no_return+no_argument": "c"
+    }
+}

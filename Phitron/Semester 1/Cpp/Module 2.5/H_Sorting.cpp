@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+#define endl "\n"
+#define nn (cout << "NO\n")
+#define yy (cout << "YES\n")
+#define ss " "
+#define ll long long
+#define ull unsigned long long
+#define gcd(a, b) __gcd(a, b)
+#define lcm(a, b) ((a / gcd(a, b)) * b)
+#define pii pair<int, int>
+#define pll pair<long long, long long>
+#define sz(v) v.size()
+#define mm(a, x) memset(a, x, sizeof(a))
+#define FIO                       \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+using namespace std;
+int main()
+{
+    FIO;
+    int n;
+    cin >> n;
+
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i+1; j < n; j++)
+        {
+            if(a[j]<a[i]) swap(a[i],a[j]);
+        }
+    }
+    
+   // using function: 
+    //sort(a,a+n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    
+
+    return 0;
+}
