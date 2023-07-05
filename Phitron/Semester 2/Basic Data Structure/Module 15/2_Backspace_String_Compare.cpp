@@ -22,7 +22,7 @@ public:
             else st2.push(ch);
         }
 
-        if(st1==st2) return true;
+        if(st1==st2) return true; //return st1==st2; // eta true othoba false return krbe
         else return false;
     }
 };
