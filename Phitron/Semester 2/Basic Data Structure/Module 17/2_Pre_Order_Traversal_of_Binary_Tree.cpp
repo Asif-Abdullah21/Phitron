@@ -20,7 +20,7 @@ void preOrder(Node *root)
 {
     if(root==NULL) return; //base case
 
-    cout << root->val<< " ";
+    cout << root->val<< " ";// amar kaj // order: root,left, right
     preOrder(root->left);
     preOrder(root->right);
 }
