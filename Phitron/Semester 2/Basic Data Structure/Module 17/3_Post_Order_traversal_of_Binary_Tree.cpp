@@ -23,7 +23,7 @@ void postOrder(Node *root)
     postOrder(root->left);
 
     postOrder(root->right);
-
+ 
     cout << root->val << " "; // amar kaj // order: left, right,root 
 }
 
