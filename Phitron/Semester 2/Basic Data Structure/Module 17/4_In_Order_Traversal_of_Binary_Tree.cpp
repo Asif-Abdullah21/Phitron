@@ -16,15 +16,15 @@ class Node
     }
 };
 
-void postOrder(Node *root)
+void inOrder(Node *root)
 {
     if(root==NULL) return; //base case
 
-    postOrder(root->left);
+    inOrder(root->left);
 
-    postOrder(root->right);
- 
-    cout << root->val << " "; // amar kaj // order: left, right,root 
+    cout << root->val << " "; // amar kaj // order: left, root,right 
+
+    inOrder(root->right);
 }
 
 int main()
@@ -50,7 +50,7 @@ int main()
     d->right = g;
     h->right = i;
 
-    postOrder(root); // 10 20 40 60 90 100 30 50 70 80 //
+    inOrder(root); // 10 20 40 60 90 100 30 50 70 80 //
      
     return 0;
 }
