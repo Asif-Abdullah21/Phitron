@@ -34,8 +34,12 @@ void level_order_print(Node *root)
         Node *front1 = q.front();
 
         q.pop();
+
+        //2. jabotio kaj kra
         
         cout << front1->val << " ";
+
+       // 3. tar children gulo ke rakha
 
         if(front1->left!=NULL) q.push(front1->left);  //if(front1->left) q.push(front1->left);//
         // same because null returns false value
