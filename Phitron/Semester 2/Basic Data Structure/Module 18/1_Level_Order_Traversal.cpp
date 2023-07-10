@@ -18,6 +18,12 @@ class Node
 
 void level_order_print(Node *root)
 {
+
+    if(root==NULL)
+    {
+        "NO TREE\n";
+        return;
+    }
     queue<Node *> q;
     
     q.push(root);
