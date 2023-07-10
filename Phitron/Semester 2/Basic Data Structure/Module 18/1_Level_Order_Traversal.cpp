@@ -30,6 +30,7 @@ void level_order_print(Node *root)
 
     while (!q.empty())
     {
+        //1.ber kore ana
         Node *front1 = q.front();
 
         q.pop();
