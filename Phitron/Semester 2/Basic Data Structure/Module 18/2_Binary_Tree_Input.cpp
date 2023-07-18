@@ -25,7 +25,7 @@ Node *input_tree()
     queue<Node *> q;
 
     if (root) q.push(root); //     if (root!=NULL) q.push(root);
-    
+
     while (!q.empty())
     {
         // 1. ber kore ano
@@ -59,13 +59,13 @@ void level_order_print(Node *root)
 {
     if(root==NULL)
     {
-        cout << "NO TREE\n";
+        cout << "0\n";
         return;
     }
 
     queue<Node *> q;
 
-    if(root) q.push(root);// if(root!=NULL) q.push(root);
+    if(root) q.push(root);
 
     while (!q.empty())
     {
@@ -82,7 +82,7 @@ void level_order_print(Node *root)
         q.pop();
 
     }
-    
+
 }
 int main()
 {
