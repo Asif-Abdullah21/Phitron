@@ -13,17 +13,17 @@ int main()
         {
             int x;
             cin >> x;
-            pq.push(x); //O(logn)
+            pq.push(x); // O(logN), N songkhok push korle complexity hoy O(NlogN) //
         }
 
         else if(val==1)
         {
-            pq.pop(); //O(logn)
+            pq.pop(); //O(logn) //max tai delete hbe
         }
 
         else if(val==2)
         {
-            cout << pq.top() << endl; //O(1)
+            cout << pq.top() << endl; //O(1) //max ta dibe
         }
         else break;
     }
