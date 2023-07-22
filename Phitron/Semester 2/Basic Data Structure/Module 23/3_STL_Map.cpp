@@ -29,7 +29,7 @@ int main()
 
     // //value ta ase kina check kri:
 
-    // if(mp.count("akib")) cout << "Present\n";
+    // if(mp.count("akib")) cout << "Present\n"; // akib er value 2 bar initialize krleu count 1 e asbe
     // else cout << "Not Present\n";
     
     // for (auto it = mp.begin(); it!=mp.end(); it++)
