@@ -33,14 +33,14 @@ void merge(int l,int r,int mid)
             a[i] = L[lp];
             lp++;
         }
-        else 
+        else
         {
             a[i] = R[rp];
             rp++;
         }
     }
-    
-    
+
+
 }
 
 void mergeSort(int l,int r)
@@ -72,8 +72,8 @@ int main()
     }
 
     cout << endl;
-    
-    
-     
+
+
+
     return 0;
 }
