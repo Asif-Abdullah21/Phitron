@@ -7,6 +7,8 @@ int level[N];
 bool visited[N];
 int parent[N];
 
+// Complexsity of BFS: O(n+m) // n=node,m=edges
+
 void bfs(int s)
 {
     queue<int> q;
@@ -59,6 +61,7 @@ int main()
     //     cout << "Parent of " << i << ": " << parent[i] << endl;
     // }
 
+  // Path Finding: Complexity --> O(n) //
     int current = d;
     vector<int> path;
 
