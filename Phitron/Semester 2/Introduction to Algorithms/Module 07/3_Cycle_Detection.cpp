@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include <bits/stdc++.h>
-using namespace std;
-
 const int N = 1e5 + 7;
 vector<int> adj[N];
 bool visited[N];
@@ -16,7 +13,7 @@ bool IsCycleDfs(int u, int p=-1) // int p=-1 mane jokhon p kisu deya thkbe na to
 
     for(int v:adj[u])
     {
-        if(v==p) continue;
+        if(v==p) continue;// p hocche u er parent
         if(visited[v]) return true;
         flag = flag | IsCycleDfs(v,u);
      //   if(flag) return true;
