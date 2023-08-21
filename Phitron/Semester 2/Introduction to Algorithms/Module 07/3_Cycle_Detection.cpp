@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include <bits/stdc++.h>
-using namespace std;
-
 const int N = 1e5 + 7;
 vector<int> adj[N];
 bool visited[N];

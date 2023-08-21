@@ -5,8 +5,8 @@ const int N = 1e5+7;
 
 vector<int> adj[N];
 bool visited[N];
-int level[N];
-
+int level[N]; //level ta kind of distance er moto, tree er jnno depth r level same but onnano graph a same nao hote pare
+ 
 void bfs(int s)
 {
     queue<int> q;
