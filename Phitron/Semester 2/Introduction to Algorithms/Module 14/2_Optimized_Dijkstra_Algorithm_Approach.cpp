@@ -1,44 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+typedef pair<int,int> pii;
 const int N = 1e5+5;
-vector<pair<int,int>> v[N];
-int dist[N];
+vector<pii> adj[N];
 bool visited[N];
+int dist[N];
 
-void dijkstra(int s)  //O(Nodes+Edges*logNodes) //O(N+ELogN)
+void dijsktra(int s)
 {
-    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
-    pq.push({0,1});
+    priority_queue<pii,vector<pii>,greater<pii>> pq;
     dist[s] = 0;
+    pq.push({0,s});
 
     while (!pq.empty())
     {
-        pair<int,int> parent = pq.top();
+        int u = pq.top().second;
         pq.pop();
-         
-        int ParentNode = parent.second;
 
-        if(visited[ParentNode]) continue;
-
-        visited[ParentNode] = true;
-
-        int parentCost = parent.first;
-
-        for (int i = 0; i < v[ParentNode].size(); i++)
+        if(visited[u]) continue;
+        visited[u] = true;
+        
+        for(auto vPair:adj[u])
         {
-            int childNode = v[ParentNode][i].first;
-            int childCost = v[ParentNode][i].second;
+            int v = vPair.first;
+            int w = vPair.second;
 
-            if(parentCost+childCost<dist[childNode])
+            if(dist[v]>dist[u]+w)
             {
-                dist[childNode] = parentCost +childCost;
-                pq.push({dist[childNode],childNode});
+                dist[v] = dist[u]+w;
+                pq.push({dist[v],v});
             }
         }
 
     }
     
+
 }
 
 int main()
@@ -48,30 +44,109 @@ int main()
 
     while (e--)
     {
-        int a,b,w;
-        cin >> a >> b >> w;
+        int u,v,w;
+        cin >> u >> v >>w;
 
-        v[a].push_back({b,w});
-        v[b].push_back({a,w});
+        adj[u].push_back({v,w});
+        adj[v].push_back({u,w});
     }
 
     for (int i = 1; i <=N; i++)
     {
         dist[i] = INT_MAX;
     }
-    
 
-    dijkstra(1);
+    dijsktra(1);
 
     for (int i = 1; i <=n; i++)
     {
-        cout << "Distance of " << i << ": " << dist[i] << endl;
+        cout << "Shortest distance of " <<i<< " : " << dist[i] <<endl;
     }
     
-
+    
      
     return 0;
 }
+
+
+
+//------------------------------------------------
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// const int N = 1e5+5;
+// vector<pair<int,int>> v[N];
+// int dist[N];
+// bool visited[N];
+
+// void dijkstra(int s)  //O(Nodes+Edges*logNodes) //O(N+ELogN)
+// {
+//     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
+//     pq.push({0,1});
+//     dist[s] = 0;
+
+//     while (!pq.empty())
+//     {
+//         pair<int,int> parent = pq.top();
+//         pq.pop();
+         
+//         int ParentNode = parent.second;
+
+//         if(visited[ParentNode]) continue;
+
+//         visited[ParentNode] = true;
+
+//         int parentCost = parent.first;
+
+//         for (int i = 0; i < v[ParentNode].size(); i++)
+//         {
+//             int childNode = v[ParentNode][i].first;
+//             int childCost = v[ParentNode][i].second;
+
+//             if(parentCost+childCost<dist[childNode])
+//             {
+//                 dist[childNode] = parentCost +childCost;
+//                 pq.push({dist[childNode],childNode});
+//             }
+//         }
+
+//     }
+    
+// }
+
+// int main()
+// {
+//     int n,e;
+//     cin >> n >> e;
+
+//     while (e--)
+//     {
+//         int a,b,w;
+//         cin >> a >> b >> w;
+
+//         v[a].push_back({b,w});
+//         v[b].push_back({a,w});
+//     }
+
+//     for (int i = 1; i <=N; i++)
+//     {
+//         dist[i] = INT_MAX;
+//     }
+    
+
+//     dijkstra(1);
+
+//     for (int i = 1; i <=n; i++)
+//     {
+//         cout << "Distance of " << i << ": " << dist[i] << endl;
+//     }
+    
+
+     
+//     return 0;
+// }
 
 
 
