@@ -16,7 +16,7 @@ public:
     {
         vis[si][sj] = true;
         cnt++;
-        for (int i = 00; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             pair<int, int> p = path[i];
             int ci = si + p.first;
