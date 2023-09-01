@@ -39,7 +39,7 @@ int main()
 
     dist[1]= 0;
 
-    for (int i = 1; i <=n-1; i++)
+    for (int i = 1; i <=n-1; i++) //O(n*e)
     {
         for (int j = 0; j < vec.size(); j++)
         {
