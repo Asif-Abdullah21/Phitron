@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int parent[1000];
-int parentSize[1000];
+int parentLevel[1000];
 
 void dsu_set(int n)
 {
@@ -54,20 +54,17 @@ int main()
         dsu_union(a, b);
     }
 
-    cout << findLeader(2) << endl;
-    cout << findLeader(5) << endl;
 
+    for (int i = 1; i <= n; i++)
+    {
+        cout << parentSize[i] << " ";
+    }
+    cout << endl;
 
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << parentSize[i] << " ";
-    // }
-    // cout << endl;
-
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << parent[i] << " ";
-    // }
+    for (int i = 1; i <= n; i++)
+    {
+        cout << parent[i] << " ";
+    }
 
     return 0;
 }
