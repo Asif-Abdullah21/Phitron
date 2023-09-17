@@ -51,7 +51,14 @@ int main()
     while(e--){
         int a, b;
         cin >> a >> b;
-        
+
+        int leaderA = findLeader(a);
+        int leaderB = findLeader(b);
+
+        if(leaderA == leaderB){
+            cout << "Cycle detected between: " << a << " " << b << endl;
+        }
+        else dsu_union(a,b);
     }
     
     return 0;
