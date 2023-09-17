@@ -64,9 +64,14 @@ int main()
  
     vector<int> v;
  
-    for (auto it=s.begin();it!=s.end();it++)
+    // for (auto it=s.begin();it!=s.end();it++)
+    // {
+    //     v.push_back(*it);
+    // }
+
+    for(int val: s)
     {
-        v.push_back(*it);
+        v.push_back(val);
     }
     
     
