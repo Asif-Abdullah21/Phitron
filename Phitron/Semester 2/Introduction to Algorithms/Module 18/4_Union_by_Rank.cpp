@@ -8,7 +8,7 @@ void dsu_set(int n)
     for (int i = 1; i <= n; i++)
     {
         parent[i] = -1;
-        parentSize[i] = 1;
+        parentLevel[i] = 0;
     }
 }
 
@@ -55,16 +55,16 @@ int main()
     }
 
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout << parentSize[i] << " ";
-    }
-    cout << endl;
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << parentLevel[i] << " ";
+    // }
+    // cout << endl;
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout << parent[i] << " ";
-    }
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << parent[i] << " ";
+    // }
 
     return 0;
 }

@@ -28,7 +28,7 @@ void dsu_union(int a, int b)
 
     if (leaderA != leaderB)
     {
-        if (parent[leaderA] > parent[leaderB])
+        if (parentSize[leaderA] > parentSize[leaderB])
         {
             parent[leaderB] = leaderA;
             parentSize[leaderA] += parentSize[leaderB];
