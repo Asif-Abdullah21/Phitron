@@ -59,7 +59,7 @@ int main()
             cout << "Cycle detected between: " << a << " " << b << endl;
         }
         else dsu_union(a,b);
-    }
+    } 
     
     return 0;
 }
