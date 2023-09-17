@@ -30,15 +30,16 @@ void dsu_union(int a, int b)
     {
         if(parentLevel[leaderA]>parentLevel[leaderB])
         {
-            parent[leaderB] = leaderA;
+            parent[leaderB] = leaderA;     // A leader hoise // 
         }
-        else if(parentLevel[leaderB]>parentLevel[leaderA])
+        else if(parentLevel[leaderB]>parentLevel[leaderA]) 
         {
-            parent[leaderA] = leaderB;
+            parent[leaderA] = leaderB;     // B leader hoise // 
         }
         else{
-            parent[leaderB] = leaderA;
-            parentLevel[leaderA]++;
+            // Jekono ekta ke Leader korlei hoy //
+            parent[leaderB] = leaderA; 
+            parentLevel[leaderA]++; // leaderB ke leader banaile parentLevel[leaderB]++; dite hoito //
         }
     }
 }
