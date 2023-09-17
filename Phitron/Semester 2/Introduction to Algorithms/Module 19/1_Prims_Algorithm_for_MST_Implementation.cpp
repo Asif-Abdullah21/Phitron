@@ -29,7 +29,7 @@ class cmp
     }
 };
 
-void prim_s(int s)
+void prim_s(int s)  //complexity : o(v+eloge)
 {
     priority_queue<Edge,vector<Edge>,cmp> pq;
     pq.push(Edge(s,s,0));
