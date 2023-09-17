@@ -28,14 +28,17 @@ void dsu_union(int a, int b)
 
     if (leaderA != leaderB)
     {
-        if (parent[leaderA] > parent[leaderB])
+        if(parentLevel[leaderA]>parentLevel[leaderB])
         {
             parent[leaderB] = leaderA;
-            parentSize[leaderA] += parentSize[leaderB];
+        }
+        else if(parentLevel[leaderB]>parentLevel[leaderA])
+        {
+            parent[leaderA] = leaderB;
         }
         else{
-            parent[leaderA] = leaderB;
-            parentSize[leaderB] += parentSize[leaderA];
+            parent[leaderB] = leaderA;
+            parentLevel[leaderA]++;
         }
     }
 }
@@ -55,16 +58,22 @@ int main()
     }
 
 
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << parentLevel[i] << " ";
-    // }
-    // cout << endl;
+    for (int i = 1; i <= n; i++)
+    {
+        cout << parentLevel[i] << " ";
+    }
+    cout << endl;
 
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << parent[i] << " ";
-    // }
+    for (int i = 1; i <= n; i++)
+    {
+        cout << parent[i] << " ";
+    }
+
+    cout << endl;
+
+    cout << findLeader(2) << endl;
+    cout << findLeader(5) << endl;
+    
 
     return 0;
 }
