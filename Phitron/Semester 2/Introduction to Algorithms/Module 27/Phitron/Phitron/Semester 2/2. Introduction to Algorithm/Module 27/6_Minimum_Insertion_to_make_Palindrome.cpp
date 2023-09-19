@@ -41,7 +41,7 @@ int main()
         }
     }
 
-    cout << "Minimum Number of Insertion to make Palindrome: " << n - dp[n][m] << endl; //size-lcs
+    cout << "Minimum Number of Insertion to make Palindrome: " << n - dp[n][m] << endl; //size-lps
 
     return 0;
 }
