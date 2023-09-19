@@ -1,6 +1,6 @@
 // Array theke koto vabe target sum pawa jay sheta ber kora //
 
-//max coins/ways
+//max ways
 
 #include<bits/stdc++.h>
 using namespace std;
