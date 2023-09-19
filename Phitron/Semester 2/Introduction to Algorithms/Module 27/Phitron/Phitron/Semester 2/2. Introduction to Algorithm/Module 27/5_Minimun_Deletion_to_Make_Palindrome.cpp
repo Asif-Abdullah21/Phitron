@@ -41,7 +41,7 @@ int main()
         }
     }
 
-    cout << "Minimum Number of Deletion to make Palindrome: " << n - dp[n][m] << endl;
+    cout << "Minimum Number of Deletion to make Palindrome: " << n - dp[n][m] << endl; //size-lcs
 
     return 0;
 }
