@@ -9,7 +9,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         int x;
-        cin >> x;
+        cin >> x; // 10 20 30 40 50
         st.push(x);
     }
     
