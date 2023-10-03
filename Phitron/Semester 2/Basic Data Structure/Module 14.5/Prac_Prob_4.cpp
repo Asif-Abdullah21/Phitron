@@ -37,11 +37,6 @@ int main()
         newQ.pop();
     }
     
-
-
-
-    
-    
      
     return 0;
 }
