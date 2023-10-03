@@ -25,27 +25,9 @@ int main()
     {
         cin >> a[i];
     }
-   
-    int k; cin >> k;
 
-    ll mx = INT_MIN; 
+    int k;
 
-    for (int i = 0; i < n-k+1; i++)
-    {
-        ll sum =0;
-        for (int j = i; j < i+k; j++)
-        {
-        //    cout << j << " ";
-            sum += a[j];
-        }
-       // cout << endl;
-        mx = max(sum,mx);
-        
-    }
-
-    cout << mx << endl;
-    
-    
      
     return 0;
 }
