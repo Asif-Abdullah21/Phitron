@@ -1,23 +1,8 @@
 #include <bits/stdc++.h>
-#define endl "\n"
-#define nn (cout << "NO\n")
-#define yy (cout << "YES\n")
-#define ll long long
-#define ull unsigned long long
-#define gcd(a, b) __gcd(a, b)
-#define lcm(a, b) ((a / gcd(a, b)) * b)
-#define pii pair<int, int>
-#define pll pair<long long, long long>
-#define mm(a, x) memset(a, x, sizeof(a))
-#define FIO                       \
-    ios_base::sync_with_stdio(0); \
-    cin.tie(0);                   \
-    cout.tie(0);
 using namespace std;
 
 int main()
 {
-    FIO;
     int n; cin >> n;
     int a[n];
 
@@ -26,8 +11,73 @@ int main()
         cin >> a[i];
     }
 
-    int k;
+    int k; cin >> k;
+
+    int mx = INT_MIN;
+    int i=0,j=0,sum=0;
+
+    while (j<n)
+    {
+        sum += a[j];
+
+        if(j>=k-1)
+        {
+            mx = max(mx, sum);
+            cout << sum << " ";
+            sum -= a[i];
+            i++;
+        }
+        j++;
+    }
+    
+    
+    cout << "\nMax sum of subarray of size k: " << mx << endl;
+     
+    return 0;
+}
+
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n; cin >> n;
+    int a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+
+    int k; cin >> k;
+
+    int mx = INT_MIN;
+
+    int sum =0;
+
+    for (int i = 0; i < k; i++)
+    {
+        sum += a[i];
+        mx = max(sum,mx);
+    }
+    //0 1 2 3 4 5 //k=3;
+    for (int i = k; i < n; i++)
+    {
+       // cout << sum << " ";
+        sum += a[i];
+        sum -= a[i-k];
+
+        mx = max(sum,mx);
+    }
+
+    cout << mx << endl;
+    
 
      
     return 0;
 }
+
+
+*/
