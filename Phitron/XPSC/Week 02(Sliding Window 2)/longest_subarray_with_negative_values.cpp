@@ -25,7 +25,7 @@ int main()
 
         if(mp.find(sum)==mp.end()) mp[sum] = i; //mp.find(sum)==mp.end() jodi paua na jay taile map a isnert krbe // duplicate sum asle map a insert krbo na cz first sum er index ta nile last theke besi boro kra jabe array ta
 
-        if(sum>s)
+        if(sum>s) //negative value er khetre if(sum>s) baad diye vitorer code ta deya lgte pare// sum er s er cheye choto o hoite pare .. tokhono nicher conditon check deya lgte pare
         {
             if(mp.find(sum-s)!=mp.end()) // jodi map a paua jay then vitore dhukbe
             {
@@ -42,7 +42,71 @@ int main()
     return 0;
 }
 
+/*
 
+//https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+class Solution{
+    public:
+    int lenOfLongSubarr(int A[],  int N, int K) 
+    { 
+        long long sum =0;
+        int mx = 0;
+        
+        map<long long,int> mp;
+        
+        for(int i=0;i<N;i++)
+        {
+            sum += A[i];
+            
+            if(sum==K) mx = max(i+1,mx);
+            
+            if(mp.find(sum)==mp.end()) mp[sum] = i;
+            
+            if(mp.find(sum-K)!=mp.end())
+            {
+                mx = max(i-mp[sum-K],mx);
+            }
+            
+        
+        }
+        
+        return mx;
+    } 
+
+};
+
+//{ Driver Code Starts.
+
+int main() {
+	//code
+	
+	int t;cin>>t;
+	while(t--)
+	{
+	    int n, k;
+	    cin>> n >> k;
+	    int a[n];
+	    
+	    for(int i=0;i<n;i++)
+	        cin>>a[i];
+	   Solution ob;
+	   cout << ob.lenOfLongSubarr(a, n , k)<< endl;
+	    
+	}
+	
+	return 0;
+}
+// } Driver Code Ends
+
+
+*/
 
 /*
 
