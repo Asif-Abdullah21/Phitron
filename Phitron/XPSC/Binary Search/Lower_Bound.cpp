@@ -27,7 +27,7 @@ int main()
         cin >> v[i];
     }
 
-    int val; cin >> val;
+    int val; cin >> val; 
 
     auto it = lower_bound(v.begin(),v.end(),val); //first greater then or equal(<=) val er adress ferot dibe//
 

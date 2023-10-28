@@ -16,7 +16,7 @@
 using namespace std;
 
 int main()
-{
+{ 
     FIO;
     int n; cin >> n;
     int a[n];

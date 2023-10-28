@@ -42,7 +42,7 @@ int main()
         }
         
         if(val<a[mid]) r = mid-1;
-        else l = mid+1;
+        else l = mid+1;   
     }
     
 

@@ -31,7 +31,7 @@ int main()
 
     auto it1 = upper_bound(v.begin(),v.end(),val); 
 
-    int indxU = it1-v.begin(); 
+    int indxU = it1-v.begin();  
 
     auto it2 = lower_bound(v.begin(),v.end(),val); 
 

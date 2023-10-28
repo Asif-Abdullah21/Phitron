@@ -23,7 +23,7 @@ bool AreSame(double val,double n)
     //  if(fabs(val-n)<1e-15) return true;
     // else return false;
 }
-
+ 
 int main()
 {
     FIO;
